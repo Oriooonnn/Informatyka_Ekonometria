@@ -1,18 +1,23 @@
 import java.util.Scanner;
-public class Main {
-    public static void main(String[] args) {
+import java.util.Random;
+
+public class Main{
+    public static void main(String[] args){
+
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Podaj ilość studentów:");
-        int n = scanner.nextInt();
-        int suma = 0, i=0;
-        while(i < n) {
-            System.out.println("Podaj ilość punktów studenta" + (i + 1) + ":");
-            suma += scanner.nextInt();
-            i++;
-        }
-        System.out.println("Średnia punktów studentów to:" + (double) suma / n);
-        scanner.close();
 
+        System.out.println("Wybierz zadanie od 1 do 5");
+        System.out.println("Zadanie numer 1");
+        System.out.println("Zadanie numer 2");
+        System.out.println("Zadanie numer 3");
+        System.out.println("Zadanie numer 4");
+        System.out.println("Zadanie numer 5");
+        int wybor = scanner.nextInt();
+        Run runProgram =new Run();
+        runProgram.executeTask(wybor);
+
+        scanner.close();
     }
 }
+
